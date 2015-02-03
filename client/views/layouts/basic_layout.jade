@@ -1,0 +1,13 @@
+template(name="basicLayout")
+    .contents-container
+        .background-image-overlay
+        #contents
+            section(id="main-content")
+                #page
+                    +yield
+            section(id="left-sidebar")
+                +header
+            section(id="footer")
+                #go-to-top(onclick="scroll_to_top();")
+                    span(class="icon glyphicon glyphicon-chevron-up")
+                .footer-text-line copyright Bob 2014

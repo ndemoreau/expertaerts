@@ -1,0 +1,38 @@
+template(name="sharedocsMenu")
+    h1#projects_menu.link Projets
+    h1 Dossiers
+    each sharedocs
+        p
+            a(href="{{pathFor 'sharedoc'}}") #{name}
+        button.btn.btn-sm.btn-outline-inverse#newSharedoc New
+
+template(name="sharedocs")
+    +sharedocsMenu
+
+template(name="sharedoc")
+    .row
+        .col-md-3
+            +sharedocsMenu
+        .col-md-9
+            with sharedoc
+                h1 #{name}
+                dl.dl-horizontal
+                    dt description
+                    dd #{description}
+                    dt Nom du client
+                    dd #{customer_name}
+                    dt Email du client
+                    dd #{customer_email}
+                    dt Numéro de dossier
+                    dd #{external_id}
+                    dt Code PIN
+                    dd #{pin}
+                    dt URL
+                    dd
+                        a(href="#{google_url}" target="_blank") #{google_url}
+                    dt Date de création
+                    dd #{creation_date}
+                    dt Invitation envoyée
+                    dd #{invited}
+            +uploadForm
+

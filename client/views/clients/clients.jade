@@ -1,0 +1,22 @@
+template(name="clients")
+    #client.page
+        h1.text-left L'espace clients
+
+        p cet espace vous donne accès à vos dossiers ouverts chez nous. Veuillez entrer le numéro de dossier ainsi que le code pin du dossier:
+        form(id="file_login" class=" form-style clearfix")
+            .form-group
+                input(id="fileId" name="fileId" type="text" class="text-field form-control required" placeholder="Numéro de dossier")
+            .form-group
+                input(id="pin" name="pin" type="password" class="text-field form-control required" placeholder="PIN")
+            .form-group
+                button#submit_file(type="submit" class="btn btn-sm btn-outline-inverse") Submit
+        if sharedoc
+            with sharedoc
+                h2 Expertise Fond du Logement trouvée:
+                p
+                    a(href="#{google_url}" target="_blank") #{name}
+        else
+            if searched
+                p Nothing found
+
+

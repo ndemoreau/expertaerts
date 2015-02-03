@@ -1,0 +1,12 @@
+template(name="loginForm")
+    .contents-container.clearfix
+        .row
+            .col-md-1
+                p Please login
+                form.form-style#login-form(action='action')
+                    div.form-group
+                        input.text-field.form-control#login-email(type='email')
+                    div.form-group
+                        input.text-field.form-control#login-password(type='password')
+                    div.form-group
+                        button.btn.btn-sm.btn-outline-inverse#login-button(type='submit') Sign-in

@@ -1,0 +1,20 @@
+template(name="adminProject")
+   .row
+      .col-md-3
+         +openProjects
+      .col-md-9
+         if newProject
+            +projectSubmit
+         else
+            with project
+               h1(id="text" class="editable inline" data-type="text" data-pk="#{_id}" data-name="name" data-value="#{name}" data-context="Projects") {{name}}
+               .clearfix
+               p(id="text" class="editable inline" data-inputclass="x-textarea" data-type="textarea" data-pk="#{_id}" data-name="description" data-value="#{description}" data-context="Projects") {{description}}
+               .clearfix
+               strong Published:
+               a(href="#" id="published") {{view_boolean published}}
+               .clearfix
+            +uploadForm
+            p
+               with project
+                  button.btn.btn-sm.btn-outline-inverse#deleteProject Delete

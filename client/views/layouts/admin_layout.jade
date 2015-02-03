@@ -1,0 +1,12 @@
+template(name="adminLayout")
+    .background-image-overlay
+    #contents.contents-container-admin
+        section(id="main-content")
+            .admin-wrapper
+                if currentUser
+                    p username: {{username}}
+                        button(id="logout" class="btn-xs btn-outline-inverse") Logout
+                    +yield
+
+                else
+                    +loginForm

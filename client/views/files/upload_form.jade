@@ -1,0 +1,26 @@
+template(name="uploadForm")
+    div#uploads
+    +imageList
+    p Ajouter des images
+    input.myFileInput(type="file")
+
+template(name="imageList")
+    h3 Images list
+    div(id="images-{{project._id}}" class="row")
+        each project_images
+            +image
+template(name="image")
+        with FS.GetFile "images" image_id
+            unless this.isUploaded
+                +FS.UploadProgressBar bootstrap=true
+            else
+                .col-md-6.image-sortable
+                    .row
+                        .col-md-6
+                            img(src="{{url}}" alt="{{name}}" class="img-thumbnail" width="140px")
+                        .col-md-6
+                            p Position: {{../rank}}
+                            .delete_button.btn.btn-danger.btn-xs
+                                                    |Effacer
+
+               

@@ -1,0 +1,7 @@
+template(name="openProjects")
+    h1 Projets
+    each projects
+        p
+            a(href="{{pathFor 'adminProject'}}") #{name}
+    button.btn.btn-sm.btn-outline-inverse#newProject New
+    h1#files_menu.link Dossiers

@@ -1,0 +1,22 @@
+template(name="notFound")
+    .well
+        h1.grey.lighter.smaller
+            span.blue.bigger-125
+                i.ace-icon.fa.fa-random
+                | 500
+            | Something Went Wrong
+            hr
+            h3.lighter.smaller
+                | But we are working
+                i.ace-icon.fa.fa-wrench.icon-animated-wrench.bigger-125
+                | on it!
+            .space
+            hr
+            .space
+            .center
+                a.btn.btn-grey(href='javascript:history.back()')
+                    i.ace-icon.fa.fa-arrow-left
+                    | Go Back
+                a.btn.btn-primary(href="{{pathFor 'buildings'}}")
+                    i.ace-icon.fa.fa-tachometer
+                    | Dashboard

@@ -1,0 +1,2 @@
+Template.drive.rendered = function() {
+}
