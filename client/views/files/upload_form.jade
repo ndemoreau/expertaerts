@@ -1,7 +1,7 @@
 template(name="uploadForm")
     div#uploads
     +imageList
-    p Ajouter des images
+    p Ajouter des documents
     input.myFileInput(type="file")
 
 template(name="imageList")
@@ -17,10 +17,19 @@ template(name="image")
                 .col-md-6.image-sortable
                     .row
                         .col-md-6
-                            img(src="{{url}}" alt="{{name}}" class="img-thumbnail" width="140px")
+                            p
+                                if isImage
+                                    img(src="{{url}}" alt="{{name}}" class="img-thumbnail" width="140px")
+                                else
+                                    .img-thumbnail.inverse
+                                        span.img-vertical-aligner
+                                        img(src="/images/logo_transp.png" alt="{{name}}" width="140px")
+                            p
+                                div(id="text" class="editable" data-type="text" data-pk="#{../_id}" data-name="name" data-value="#{../name}" data-context="ProjectImages") #{../name}
+                                br
+                                div(id="text" class="editable" data-type="textarea" data-pk="#{../_id}" data-name="description" data-value="#{../description}" data-context="ProjectImages") #{../description}
                         .col-md-6
                             p Position: {{../rank}}
                             .delete_button.btn.btn-danger.btn-xs
                                                     |Effacer
 
-               

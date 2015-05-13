@@ -15,30 +15,35 @@ body {
     font-size:18px;
     height: 100%;
 }
-
-body.admin {
-    width: 100%;
+#contents, #main-content {
+    display: inline-block;
+    min-height: 100%;
 }
 #page {
-    min-height: 600px;
+    min-height: 100%;
+    height: 100%;
 }
 .contents-container-admin {
-    background: transparent url('images/brupan.jpg') no-repeat left top;
-    overflow-y: hidden;
+    background-color: #595959;
     min-height: 100%;
-    padding: 20px;
+    background: -webkit-linear-gradient(to bottom, rgba(89, 89, 89, 1),  rgba(89, 89, 89, 0));
+    background: -o-linear-gradient(to bottom, rgba(89, 89, 89, 1),  rgba(89, 89, 89, 0));
+    background: -moz-linear-gradient(to bottom, rgba(89, 89, 89, 1),  rgba(89, 89, 89, 0));
+    background: linear-gradient(to bottom, rgba(89, 89, 89, 1),  rgba(89, 89, 89, 0));
 }
+.contents-admin {
 
+}
 .contents-container {
-    background: transparent url('images/brupan.jpg') no-repeat left top;
+    background: transparent url('images/brupan_nbb_low_5.jpg') no-repeat left top;
     overflow-y: hidden;
     min-height: 100%;
-    width: 8000px;
+    width: 6667px;
 }
 
 @media (max-width: 767px) {
     .contents-container {
-        min-width: 4608px;
+        min-width: 3840px;
     }
     .page {
         min-width: 600px;
@@ -47,7 +52,7 @@ body.admin {
 
 @media (min-width: 768px) {
     .contents-container {
-        min-width: 4608px;
+        min-width: 3840px;
     }
     .page {
         min-width: 768px;
@@ -55,7 +60,7 @@ body.admin {
 }
 @media (min-width: 992px) {
     .contents-container {
-        min-width: 5952px;
+        min-width: 4960px;
     }
     .page {
         min-width: 991px;
@@ -63,7 +68,7 @@ body.admin {
 }
 @media (min-width: 1200px) {
     .contents-container {
-        width: 7200px;
+        width: 6000px;
     }
     .page {
         min-width: 1200px;
@@ -90,7 +95,13 @@ a,
 }
 .admin-wrapper {
     width: 100%;
-    margin: 30px;
+    margin-top: 0;
+    padding-right: 20px;
+}
+.editclickable {
+    text-decoration: none;
+    border-bottom: dashed 1px #0088cc;
+    cursor: hand;
 }
 .customer-logo {
     padding: 20px;
@@ -324,7 +335,7 @@ table {
 .btn-outline-inverse {
   color: #fff;
   background-color: transparent;
-  border-color: orange;
+  border-color: #80ff00;
   font-weight: 600;
 }
 .btn-outline-inverse:hover,
@@ -379,18 +390,27 @@ table {
     left:0;
     width:100%;
     height:100%;
-    min-height: 600px;
     z-index:0;
-    background: linear-gradient(to bottom, rgba(0, 0, 41, 1),  rgba(0, 0, 41, 1));
+    background:url(images/theme_images/background-image-overlay.png) repeat;
+    opacity: .3;
 }
-
+.startup-background {
+    display:block;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: #525561;
+    z-index: 1;
+}
 /* ====================================================
    FIXED LEFT SIDEBAR (LOGO + MENU)
    ==================================================== */
 
 #left-sidebar {
     display:block;
-    background: rgba(0,0,0,0.29); 
+    z-index: 2;
 }
     @media (max-width: 767px) {
         #left-sidebar {
@@ -412,14 +432,17 @@ table {
     @media (min-width: 768px) {
         #left-sidebar {
             /* any change has to be replicated in #footer below */
-            height:100%;
+            height:75%;
             position: fixed;
             top:0;
             left:60px;
             width:13%;
             max-width:150px;
             min-width:150px;
-            background-color: orange;
+            background: -webkit-linear-gradient(to bottom, rgba(89, 89, 89, 1),  rgba(89, 89, 89, 0));
+            background: -o-linear-gradient(to bottom, rgba(19, 19, 4, 1),  rgba(19, 19, 4, 0));
+            background: -moz-linear-gradient(to bottom, rgba(19, 19, 4, 1),  rgba(19, 19, 4, 0));
+            background: linear-gradient(to bottom, rgba(19, 19, 4, 1),  rgba(19, 19, 4, 0));
         }
         #footer {
             left: 60px;
@@ -555,9 +578,8 @@ table {
 }
 
 #left-sidebar #main-menu > li.menu-item.active > * {
-    font-family: 'open_sansbold', sans-serif;
-    font-weight: bold;
     background:rgba(0,0,0,0.15);
+    color: #80ff00;
 }
 
     @media (min-width: 768px) {
@@ -800,9 +822,8 @@ h1 {
     font-size:1.5em;
     line-height:1.1;
     margin:0.5em 0;
-    color: orange;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.33);
-    font-weight: 300;
+    color: #80ff00;
+    font-weight: 900;
     padding-right: 15px;
     text-transform: uppercase;
 }
@@ -838,7 +859,7 @@ h6 {
 }
 
 #main-content *.section-title {
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    font-size: 1.3em;
 }
 
 #main-content *.section-title.bullets {
@@ -1315,7 +1336,7 @@ h6 {
 #main-content .form-style input.text-field,
 #main-content .form-style textarea {
     background:rgba(0,0,0,0.15);
-    border-color:orange;
+    border-color:#80ff00;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;  
@@ -1329,6 +1350,15 @@ h6 {
 }
 .link {
     cursor: pointer;
+}
+.sharedoc {
+    min-height: 200px;
+}
+.editable {
+    display: inline-block;
+}
+.editableform .form-control {
+    width: 400px;
 }
 #main-content .form-style input.text-field::-webkit-input-placeholder,
 #main-content .form-style input.text-field:-moz-placeholder,
@@ -1772,7 +1802,22 @@ h6 {
     height: auto;
     display: block;
 }
-
+.img-thumbnail.inverse {
+    background-color: #000029;
+    height: 85px;
+    min-width: 145px;
+    white-space: nowrap;
+}
+.img-vertical-aligner {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.img-project {
+    width: 250px;
+    height: 172px;
+    white-space: nowrap;
+}
 .owl-carousel .owl-item .caption {
     display: block;
     position: absolute;
@@ -1868,4 +1913,8 @@ img.full-width {
 
 .admin-view a {
     color: blue;
+}
+
+#newSharedocButton {
+    margin-top: 30px;
 }

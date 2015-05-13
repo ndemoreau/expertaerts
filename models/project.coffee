@@ -59,7 +59,7 @@ Meteor.methods
     console.log "inserting project..."
     p = project
     p["creation_date"] = new Date()
-    p.published = false
+    p.published = true
     id = Projects.insert(p)
     return id
 

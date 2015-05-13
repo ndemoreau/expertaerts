@@ -11,10 +11,22 @@ Router.configure
 
 @subs = new SubsManager()
 
+#Router.onBeforeAction (->
+#  $(".page").addClass("slideOutRight")
+#  current = this
+#  Meteor.setTimeout(=>
+#    console.log "Waiting"
+#    current.next()
+#  ,5000)
+#), only: ['clients', 'projects']
+
+
+
 Router.onAfterAction ->
   setTimeout( ->
     $(".editable").editable
-      placement: "bottom"
+      placement: "inline"
+      inputclass: 'input-xxlarge'
       display: ->
       success: (response, newValue) ->
         newVal = {}
@@ -30,11 +42,10 @@ Router.onAfterAction ->
     if  url.indexOf("#") > -1
       this_url = url.split("#")[1]
       console.log this_url
-      goToPage this_url
+      goToPage this_url, 1000
     else
       $("html, body").stop().animate
         scrollLeft: 0
         scrollTop: 0
       ,1
-    Session.set "newProject", false
   ,0)

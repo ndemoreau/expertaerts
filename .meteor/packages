@@ -30,3 +30,6 @@ meteorhacks:npm
 
 npm-container
 percolate:google-api
+momentjs:moment
+natestrauser:animate-css
+cfs:s3

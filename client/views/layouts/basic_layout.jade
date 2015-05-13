@@ -1,5 +1,6 @@
 template(name="basicLayout")
     .contents-container
+        .startup-background
         .background-image-overlay
         #contents
             section(id="main-content")
@@ -11,3 +12,4 @@ template(name="basicLayout")
                 #go-to-top(onclick="scroll_to_top();")
                     span(class="icon glyphicon glyphicon-chevron-up")
                 .footer-text-line copyright Bob 2014
+    +yield region='modal'

@@ -1,7 +1,46 @@
+template(name="projects")
+    #projects.page.animated.slideInRight
+        h1 Dossiers en cours
+        section.feature-columns.row.clearfix
+            each projects
+                +article
+template(name="article")
+    article.feature-col.col-md-4
+        a(href="#" class="project-item thumbnail linked")
+            .image-container
+                if first_image
+                    with first_image
+                        img(src="{{url}}" alt="{{name}}" class="item-thumbnail")
+                else
+                    .img-project
+                        span.img-vertical-aligner
+                        img(src="images/logo_transp.png" alt="{{name}}" width="250px")
+            .caption
+                h5 #{name}
+template(name="projectModal")
+    div(id="common-modal" class="modal fade in")
+        .modal-dialog
+            .modal-content
+                button(class="close" data-dismiss="modal" aria-hidden="true") x
+                .modal-body
+                    h1 {{name}}
+                    p {{{description}}}
+                    .popup-image-gallery.owl-carousel.owl-theme
+                        each images
+                            +articleImage
+template(name="articleImage")
+    with image
+        .item
+            img(src="{{url}}" alt="{{name}}" width="100%")
+
+
 template(name="openProjects")
-    h1 Projets
-    each projects
-        p
-            a(href="{{pathFor 'adminProject'}}") #{name}
-    button.btn.btn-sm.btn-outline-inverse#newProject New
-    h1#files_menu.link Dossiers
+    .container-fluid
+        .row
+            .col-md-12
+                h1 Dossiers en cours
+                each projects
+                    p
+                        a(href="{{pathFor 'adminProject'}}") #{name}
+                button.btn.btn-sm.btn-outline-inverse#newProject New
+                h1#files_menu.link Espace Client

@@ -11,3 +11,11 @@ Handlebars.registerHelper "view_boolean",(input) ->
     return "No"
 Handlebars.registerHelper "trimString",(input, size) ->
   input.substring(0, size) + "..."
+Handlebars.registerHelper "date", (date) ->
+  moment(date).format("DD/MM/YYYY")
+
+Handlebars.registerHelper "isPublished",(published) ->
+  if published
+    return "Published"
+  else
+    return "Not published"

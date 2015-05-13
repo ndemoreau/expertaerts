@@ -30,8 +30,10 @@ Router.map ->
     waitOn: ->
       subs.subscribe "allSharedocs"
       subs.subscribe "allProjectImages", @params._id
+      subs.subscribe "allImages"
     data: ->
       sharedocs: Sharedocs.find()
       sharedoc: Sharedocs.findOne(@params._id)
-      project_images: ProjectImages.find({project_id: @params._id})
+      project: Sharedocs.findOne(@params._id)  #hack to be able to use images insert in a generic way
+      project_images: ProjectImages.find({project_id: @params._id}, {sort: {rank: 1}})
 

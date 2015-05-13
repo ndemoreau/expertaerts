@@ -87,9 +87,9 @@ Meteor.methods
     v = {}
     p = {}
     v["expertize_nbr"] = content[1]
-    p["name"]= "Expertise Fond du Logement" + content[1]
+    p["name"]= "Expertise Fond du Logement " + content[1]
     p["customer_name"] = content[2]
-    p["pin"]= content[3]
+    p["pin"]= randomString(6, '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ')
     p["external_id"]= content[4]
     p["google_url"]=content[5]
     p["creation_date"] = new Date()
@@ -111,6 +111,8 @@ Meteor.methods
     p = sharedoc
     p["creation_date"] = new Date()
     p.published = false
+    p.pin = randomString(6, '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+    p.expertize_nbr = p.external_id
     id = Sharedocs.insert(p)
     return id
 
@@ -132,3 +134,13 @@ Meteor.methods
 #    }else{
 #      throw new Meteor.Error(403, 'You do not have the rights to delete this sharedoc.')
 #    }
+
+randomString = (length, chars) ->
+  result = ''
+  result += chars[Math.round(Math.random() * (chars.length - 1))] for i in [1..length]
+  sharedocs = Sharedocs.find({},{fields: {pin: 1}}).fetch()
+  sharedocs = _.uniq(sharedocs.map((sharedoc) -> sharedoc.pin))
+  if _.indexOf(result, sharedocs) > -1
+    return randomString(6, '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+  else
+    return result

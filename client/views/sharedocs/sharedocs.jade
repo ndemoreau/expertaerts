@@ -1,13 +1,29 @@
 template(name="sharedocsMenu")
-    h1#projects_menu.link Projets
-    h1 Dossiers
-    each sharedocs
-        p
-            a(href="{{pathFor 'sharedoc'}}") #{name}
-        button.btn.btn-sm.btn-outline-inverse#newSharedoc New
+    h1#projects_menu.link Dossiers en cours
+    h1#files_menu.link Espace clients
+
 
 template(name="sharedocs")
-    +sharedocsMenu
+    .container-fluid
+        .row
+            .col-md-3
+                +sharedocsMenu
+            .col-md-9
+                h1 Dossiers
+                each sharedocs
+                    +sharedocLine
+                if session "createSharedoc"
+                    .row
+                        .col-md-12
+                            +newSharedoc
+                else
+                    button.btn.btn-sm.btn-outline-inverse#newSharedocButton New
+template(name="sharedocLine")
+    .row
+        .col-md-9
+            a(href="{{pathFor 'sharedoc'}}") #{name}
+        .col-md-3
+            span#published.editclickable {{isPublished published}}
 
 template(name="sharedoc")
     .row
@@ -15,24 +31,45 @@ template(name="sharedoc")
             +sharedocsMenu
         .col-md-9
             with sharedoc
-                h1 #{name}
+                h1
+                    div(id="text" class="editable" data-placement="inline" data-type="text" data-pk="#{_id}" data-name="name" data-value="#{name}" data-context="Sharedocs") #{name}
                 dl.dl-horizontal
                     dt description
-                    dd #{description}
+                    dd
+                        div(id="text" class="editable" data-placement="inline" data-type="textarea" data-pk="#{_id}" data-name="description" data-value="#{description}" data-context="Sharedocs") #{description}
                     dt Nom du client
-                    dd #{customer_name}
+                    dd
+                        div(id="text" class="editable" data-placement="inline" data-type="text" data-pk="#{_id}" data-name="customer_name" data-value="#{customer_name}" data-context="Sharedocs") #{customer_name}
                     dt Email du client
-                    dd #{customer_email}
-                    dt Numéro de dossier
+                    dd
+                        div(id="text" class="editable" data-placement="inline" data-type="text" data-pk="#{_id}" data-name="customer_email" data-value="#{customer_email}" data-context="Sharedocs") #{customer_email}
+                    dt Numéro de dossier FDL
                     dd #{external_id}
                     dt Code PIN
                     dd #{pin}
                     dt URL
                     dd
-                        a(href="#{google_url}" target="_blank") #{google_url}
+                        div(id="text" class="editable" data-placement="inline" data-type="text" data-pk="#{_id}" data-name="google_url" data-value="#{google_url}" data-context="Sharedocs") #{google_url}
+                    dt Published
+                    dd
+                        span#published.clickable {{isPublished published}}
                     dt Date de création
-                    dd #{creation_date}
+                    dd {{date creation_date}}
                     dt Invitation envoyée
                     dd #{invited}
             +uploadForm
+template(name="newSharedoc")
+    h2 Nouveau dossier
+    form(id="newSharedoc" class=" form-style clearfix")
+        .form-group
+            input(id="name" name="name" type="text" class="text-field form-control required" placeholder="Nom")
+        .form-group
+            input(id="customer_name" name="customer_name" type="text" class="text-field form-control required" placeholder="Nom du client")
+        .form-group
+            input(id="customer_email" name="customer_email" type="text" class="text-field form-control required" placeholder="Email du client")
+        .form-group
+            input(id="google_url" name="google_url" type="text" class="text-field form-control required" placeholder="Lien Google Drive")
+        .form-group
+            button#submit_file(type="submit" class="btn btn-sm btn-outline-inverse") Submit
+            a(href="#" id="cancelNewSharedoc" class="btn btn-sm btn-outline-inverse") Cancel
 

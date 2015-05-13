@@ -9,6 +9,18 @@ Schemas.ProjectImage = new SimpleSchema
     label: "image_id"
     max: 50
 
+  name:
+    type: String
+    label: "Nom"
+    max: 50
+    optional: true
+
+  description:
+    type: String
+    label: "Description"
+    max: 50
+    optional: true
+
   rank:
     type: Number
     label: "rank"
@@ -63,6 +75,5 @@ Meteor.methods
 #      throw new Meteor.Error(403, 'You do not have the rights to delete this projectimage.')
 #    }
   UpdateProjectImageByImageId: (image_id, update) ->
-    debugger
     console.log "updating: " + image_id + update.rank
     ProjectImages.update({image_id: image_id}, {$set:update})

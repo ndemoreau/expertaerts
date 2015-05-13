@@ -1,6 +1,7 @@
 Template.uploadForm.events
   "change .myFileInput": (event, template) ->
     FS.Utility.eachFile event, (file) ->
+      file_name = file.name
       Images.insert file, (err, fileObj) ->
         if err
           console.log err
@@ -10,6 +11,7 @@ Template.uploadForm.events
           pi = {}
           pi.image_id = picture_id
           pi.project_id = current_project
+          pi.name = file_name
           console.log "Image created: " + pi
           Meteor.call "createProjectImage", pi
   "click .delete_button": ->
@@ -19,6 +21,7 @@ Template.uploadForm.events
     Meteor.call "makeFirst", @_id
 
 Template.image.helpers
+
 
 
 

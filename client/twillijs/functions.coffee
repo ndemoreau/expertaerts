@@ -28,7 +28,8 @@
 @toggle_main_menu = ->
 
   # only applies for mobile window widths
-  if viewport().width <= window.xs_screen_max
+  if viewport().width < window.xs_screen_max
+    debugger
     mobile_menu_icon = $("#left-sidebar #mobile-menu-icon")
     main_menu = $("#left-sidebar #main-menu")
 

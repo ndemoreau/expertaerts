@@ -1,7 +1,12 @@
 Template.basicLayout.rendered = ->
   setTimeout( ->
     setSizes()
-    fadeBackground()
+    if  Iron.Location.get().originalUrl.indexOf("#") > -1
+      this_url = Iron.Location.get().originalUrl.split("#")[1]
+      console.log this_url
+      goToPage this_url, 0
+
+    $(".startup-background").fadeOut("2000")
     $(window).on('resize', ->
       console.log "resize"
       setSizes()
@@ -26,9 +31,9 @@ Template.basicLayout.rendered = ->
 
 @setSizes = ->
   height = $(window).height()
-  optimalwidth = Math.round(9720 * height / 912)
+  optimalwidth = Math.round(8100 * height / 912)
   pageWidth = Math.round($(window).width())
-  minimalWidth = pageWidth * 6
+  minimalWidth = pageWidth * 5
   width = Math.max(optimalwidth, minimalWidth)
 
   console.log width
@@ -39,17 +44,4 @@ Template.basicLayout.rendered = ->
     $(".contents-container").css("width",width + "px")
     $(".contents-container").css("height",height + "px")
     $(".page").css("width",pageWidth + "px")
-
-gradient = .9
-@fadeBackground = ->
-  $(".mainlogo").removeClass("hidden")
-  setTimeout( ->
-    console.log "fading"
-    $(".background-image-overlay").css("background","linear-gradient(to bottom, rgba(0, 0, 41, .9),  rgba(0, 0, 41, " + gradient + ")")
-    gradient = gradient - .1
-    if gradient > .1
-      fadeBackground()
-  ,100
-
-  )
 

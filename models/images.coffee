@@ -1,5 +1,8 @@
 imageStore = new FS.Store.GridFS "images"
 
+s3Store = new FS.Store.S3 "s3Images",
+  bucket: "aerts" #required
+
 
 @Images = new FS.Collection "images",
   stores: [imageStore]
@@ -17,7 +20,4 @@ Meteor.methods
         ProjectImages.remove pi._id
         console.log "Project image removed: " + pi._id
       image=undefined
-  makeFirst: (id) ->
-    pi = ProjectImages.findOne({image_id: id})
-    Projects.update(pi.project_id, $set: {first_image: id})
 

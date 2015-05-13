@@ -1,22 +1,42 @@
 template(name="clients")
-    #client.page
+    #client.page.animated.slideInRight
         h1.text-left L'espace clients
 
-        p cet espace vous donne accès à vos dossiers ouverts chez nous. Veuillez entrer le numéro de dossier ainsi que le code pin du dossier:
+        p
+            |Cet espace vous donne accès à vos dossiers traités et clôturés par nous. <br/>
+            |Ils y seront hébergés et téléchargeables pour une période de 3 années. <br/>
+            |En cas de besoin, demandez-nous votre exemplaire papier via notre page
+            a(href="/#contacts") contact
+        p Veuillez entrer le numéro de dossier:
         form(id="file_login" class=" form-style clearfix")
             .form-group
-                input(id="fileId" name="fileId" type="text" class="text-field form-control required" placeholder="Numéro de dossier")
-            .form-group
-                input(id="pin" name="pin" type="password" class="text-field form-control required" placeholder="PIN")
+                input(id="pin" name="pin" type="password" class="text-field form-control required" placeholder="Numéro de dossier")
             .form-group
                 button#submit_file(type="submit" class="btn btn-sm btn-outline-inverse") Submit
-        if sharedoc
-            with sharedoc
-                h2 Expertise Fond du Logement trouvée:
-                p
-                    a(href="#{google_url}" target="_blank") #{name}
-        else
-            if searched
-                p Nothing found
+        .alert.alert-warning.hidden   #{nothing_found}
 
+template(name="ProjectImageList")
+    h3 Fichiers disponibles
+    div(id="images-{{project._id}}" class="row")
+    each project_images
+        +ProjectImage
+template(name="ProjectImage")
+    with FS.GetFile "images" image_id
+        .col-md-6.sharedoc
+            .row
+                .col-md-6
+                    if isImage
+                        img(src="{{url}}" alt="{{name}}" class="img-thumbnail" width="140px")
+                    else
+                        .img-thumbnail.inverse
+                            span.img-vertical-aligner
+                            img(src="images/logo_transp.png" alt="{{name}}" width="140px")
+                .col-md-6
+                    a(href="{{url download=true}}" class="btn btn-sm btn-outline-inverse") download
+            .row
+                .col-md-12
+                    p {{../name}}
+                    br
+                    span {{../description}}
+                    br
 

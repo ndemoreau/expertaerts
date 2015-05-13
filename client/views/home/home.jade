@@ -3,11 +3,10 @@ template(name="home")
     +bureau
     +services
     +partners
-    +projects
     +contact
 template(name="homeDiv")
     #home.page
-        .mainlogo.hidden
+        .mainlogo
             img(src="images/logo_transp.png" width="438px" id="logo")
 template(name="bureau")
     #bureau.page
@@ -35,63 +34,51 @@ template(name="services")
                 .grid-item.col-md-6
                     .item-content.clearfix
                         ul.services
-                            li Etablissement de la valeur d’immeuble (valeur de construction, dépréciation par vétusté, valeur de marché ou vénale, valeur locative)
+                            li Etablissement de la valeur d’immeuble (valeur de construction, dépréciation par vétusté, valeur de marché ou vénale, valeur locative, valeur de rendement)
                             li Etude pour rénovation, construction, reconversion ou réaffectation d’immeuble.
                             li Etude de faisabilité économique.
                             li Conception architecturale et étude d'aménagement.
                             li Maîtrise d’ouvrage déléguée et suivi d’exécution de travaux.
 template(name="partners")
     #partners.page
-        h1.section-title.pull-right  Partenaires et clients
+        h1.section-title  Partenaires et clients
         .clearfix
-        section.grid.row.customer-logos.clearfix.clearfix-for-2cols
-            .grid-item.col-xs-6
-                .item-content.customer-logo.clearfix
-                    img(src="images/clients/cph_logo.png" width="40%")
-                .item-content.customer-logo.clearfix
-                    img(src="images/clients/fdl_logo.png" width="40%")
-                .item-content.customer-logo.clearfix
-                    img(src="images/clients/fantasio_logo.png" width="40%")
-                .item-content.customer-logo.clearfix
-                    img(src="images/clients/logo_belsquare.png" width="40%")
-            .grid-item.col-xs-6
-                .item-content.customer-logo.clearfix
-                    img(src="images/clients/easylife_logo.png" width="40%")
-                .item-content.customer-logo.clearfix
-                    img(src="images/clients/logo-gotham-city.png" width="40%")
-                .item-content.customer-logo.clearfix
-                    img(src="images/clients/RB.png" width="40%")
-template(name="projects")
-    #projects.page
-        h1 Dossiers en cours
-        section.feature-columns.row.clearfix
-            each projects
-                +article
+        section.grid.row.clearfix.clearfix-for-2cols
+            .grid-item.col-md-6
+                .item-content.clearfix
+                    ul.services
+                        li CPH Banque
+                        li Fonds du Logement - Woningfonds
+                        li Belsquare
+                        li Triodos Bank
+                        li One To Be
+                        li C.S.T.C.
+            .grid-item.col-md-6
+                .item-content.clearfix
+                    ul.services
+                        li Easylife in Brussels
+                        li Gotham City
+                        li RB Construction
+                        li Espace Kegeljan
+                        li SECO
+                        li InSpace
 
-template(name="article")
-    article.feature-col.col-md-4
-        a(href="#" class="project-item thumbnail linked")
-            .image-container
-                with first_image
-                    img(src="{{url}}" alt="{{name}}" class="item-thumbnail")
-            .caption
-                h5 #{name}
-    div(id="common-modal-{{_id}}" class="modal fade in")
-        .modal-dialog
-            .modal-content
-                button(class="close" data-dismiss="modal" aria-hidden="true") x
-                .modal-body
-                    with project
-                        h1 {{name}}
-                        p #{description}
-                        .popup-image-gallery.owl-carousel.owl-theme
-                            each images
-                                +articleImage
+        //section.grid.row.customer-logos.clearfix.clearfix-for-2cols
+        //    .grid-item.col-xs-6
+        //        .item-content.customer-logo.clearfix
+        //            img(src="images/clients/cph_logo.png" width="40%")
+        //        .item-content.customer-logo.clearfix
+        //            img(src="images/clients/fdl_logo.png" width="40%")
+        //        .item-content.customer-logo.clearfix
+        //            img(src="images/clients/logo_belsquare.png" width="40%")
+        //    .grid-item.col-xs-6
+        //        .item-content.customer-logo.clearfix
+        //            img(src="images/clients/easylife_logo.png" width="40%")
+        //        .item-content.customer-logo.clearfix
+        //            img(src="images/clients/logo-gotham-city.png" width="40%")
+        //        .item-content.customer-logo.clearfix
+        //            img(src="images/clients/RB.png" width="40%")
 
-template(name="articleImage")
-    with image
-        .item
-            img(src="{{url}}" alt="{{name}}" width="100%")
 template(name="contact")
     #contact.page
         h1.text-right Contact

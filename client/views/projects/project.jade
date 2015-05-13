@@ -11,8 +11,8 @@ template(name="adminProject")
                .clearfix
                p(id="text" class="editable inline" data-inputclass="x-textarea" data-type="textarea" data-pk="#{_id}" data-name="description" data-value="#{description}" data-context="Projects") {{description}}
                .clearfix
-               strong Published:
-               a(href="#" id="published") {{view_boolean published}}
+               strong Published : &nbsp;
+               a(href="#" id="published" class="editclickable") {{view_boolean published}}
                .clearfix
             +uploadForm
             p

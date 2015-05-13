@@ -1,6 +1,7 @@
 
 Meteor.startup(function() {
     Fiber = Npm.require('fibers');
+    time = setInterval(function() {
         console.log("Starting IMAP");
         var Imap = Meteor.npmRequire('imap'),
             inspect = Meteor.npmRequire('util').inspect;
@@ -108,6 +109,6 @@ Meteor.startup(function() {
         });
 
         imap.connect();
-
+    },360000);
 });
 

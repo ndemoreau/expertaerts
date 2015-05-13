@@ -1,5 +1,5 @@
 template(name="clientLayout")
-    .contents-container
+    .contents-container-admin
         .background-image-overlay
         #contents
             section(id="main-content")
@@ -11,3 +11,5 @@ template(name="clientLayout")
                 #go-to-top(onclick="scroll_to_top();")
                     span(class="icon glyphicon glyphicon-chevron-up")
                 .footer-text-line copyright Bob 2014
+    #modal-wrapper
+    +yield region='modal'

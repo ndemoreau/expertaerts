@@ -10,6 +10,7 @@ AutoForm.hooks
           #$('#newProject').modal('hide')
           project = Projects.findOne(result)
           Notifications.success 'Project created: ' + Meteor.call('name', project)
+          Session.set "newProject", false
           Router.go "adminProject", project
 
 

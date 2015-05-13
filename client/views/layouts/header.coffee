@@ -13,17 +13,16 @@ Template.header.events
     if  e.target.href.indexOf "#" > -1
       e.preventDefault
       target = e.target.href.split("#")[1]
-      console.log target
       goToPage target
       toggle_main_menu()
 
-@goToPage = (target) ->
+@goToPage = (target, speed) ->
   unless $("#" + target).position() == undefined
     $("html, body").stop().animate
       scrollLeft: $("#" + target).position().left
       scrollTop: $(document).height()
       ,
-      1000
+      speed
       ,
       "easeOutQuint"
 
