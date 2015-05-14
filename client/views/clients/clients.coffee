@@ -36,4 +36,5 @@ Template.ProjectImageList.helpers
 
 Template.clients.rendered = ->
   Session.set("nothing_found", false)
+  Session.set("emailSent", false)
   delete Session.keys["current_pin"]

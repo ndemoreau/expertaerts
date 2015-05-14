@@ -93,14 +93,18 @@ template(name="contact")
                 | Rue du Monastère, 12 <br>
                 | 1000 Bruxelles - Belgique
         .col-sm-7.col-md-7
-            form.form-style.clearfix#newRequest
-                .form-group
-                    input(type="text" class="text-field form-control required" placeholder="Nom complet" name="name")
-                .form-group
-                    input(type="email" class="text-field form-control required" placeholder="email" name="email")
-                .form-group
-                    input(type="tel" class="text-field form-control required" placeholder="Téléphone" name="tel")
-                .form-group
-                    textarea(type="text" class="form-control required" placeholder="Message..." name="message")
-                .form-group
-                    button(type="submit" class="btn btn-sm btn-outline-inverse") Submit
+            if emailSent
+                p Un email nous a été envoyé.
+                p Nous vous recontacterons dans les plus brefs délais.
+            else
+                form.form-style.clearfix#newRequest
+                    .form-group
+                        input(type="text" class="text-field form-control required" placeholder="Nom complet" name="name")
+                    .form-group
+                        input(type="email" class="text-field form-control required" placeholder="email" name="email")
+                    .form-group
+                        input(type="tel" class="text-field form-control required" placeholder="Téléphone" name="tel")
+                    .form-group
+                        textarea(type="text" class="form-control required" placeholder="Message..." name="message")
+                    .form-group
+                        button(type="submit" class="btn btn-sm btn-outline-inverse") Submit
