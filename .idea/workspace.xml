@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="93448685-f345-4887-823f-8d3c4579ab6e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/email.coffee" afterPath="$PROJECT_DIR$/server/email.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/newrelic.js" afterPath="$PROJECT_DIR$/server/newrelic.js" />
     </list>
     <ignored path="aerts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,18 +36,8 @@
       <file leaf-file-name="email.coffee" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/email.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5839416">
-              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newrelic.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/newrelic.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.03649635">
+              <caret line="1" column="68" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -713,18 +702,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/newrelic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/email.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5839416">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.03649635">
+          <caret line="1" column="68" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="68" />
           <folding />
         </state>
       </provider>

@@ -1,5 +1,5 @@
 Meteor.startup ->
-  process.env.MAIL_URL = 'smtp://nicolas%40bloomdesk.com:MarsBloom07@smtp.gmail.com:587/'
+  process.env.MAIL_URL = 'smtp://app36811562@heroku.com:dxcyxz9a3815@smtp.sendgrid.net:587/'
 
 Meteor.methods
   sendEmail: (data) ->
