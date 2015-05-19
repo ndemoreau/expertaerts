@@ -16,7 +16,7 @@ Meteor.methods
     Email.send(
       from: "Mars & Moore <nicolas@marsmoore.com>"
       to: "expertaertsbob@gmail.com"
-      to: "nicolas@marsmoore.com"
+      #to: "nicolas@marsmoore.com"
       subject: "Nouvelle demande via site"
       html: mail_html
     )
