@@ -1,6 +1,6 @@
 template(name="projects")
     #projects.page.animated.slideInRight
-        h1 Dossiers en cours
+        h1 {{_ "dossiers_courants"}}
         section.feature-columns.row.clearfix
             each projects
                 +article
@@ -16,15 +16,15 @@ template(name="article")
                         span.img-vertical-aligner
                         img(src="images/logo_transp.png" alt="{{name}}" width="250px")
             .caption
-                h5 #{name}
+                h5 {{__ this "name"}}
 template(name="projectModal")
     div(id="common-modal" class="modal fade in")
         .modal-dialog
             .modal-content
                 button(class="close" data-dismiss="modal" aria-hidden="true") x
                 .modal-body
-                    h1 {{name}}
-                    p {{{description}}}
+                    h1 {{__ this "name"}}
+                    p {{{__ this "description"}}}
                     .popup-image-gallery.owl-carousel.owl-theme
                         each images
                             +articleImage

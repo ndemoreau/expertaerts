@@ -17,7 +17,6 @@ aldeed:autoform
 aldeed:collection2
 meteorhacks:subs-manager
 gfk:notifications
-insecure
 mrt:x-editable-bootstrap3
 cfs:ui
 cfs:gridfs
@@ -33,4 +32,4 @@ percolate:google-api
 momentjs:moment
 natestrauser:animate-css
 cfs:s3
-meteortoys:allthings
+tap:i18n

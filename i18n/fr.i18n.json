@@ -1,0 +1,36 @@
+{
+  "anglais": "Anglais",
+  "accueil": "Accueil",
+  "services": "services",
+  "partenaires": "partenaires",
+  "dossiers": "dossiers",
+  "espace_clients": "Espace clients",
+  "bureau": "Office",
+  "bureau_text": "<p>Bureau d’études basé à Bruxelles et organisé sous la forme d’une petite structure flexible, polyvalente et efficiente.</p><p> A l’écoute de divers type d’acteurs immobiliers, le bureau offre ses services avec une volonté de « sur-mesure client »</p><p> Chaque problématique est étudiée de façon indépendante et s’intègre dans un processus global synthétisant à la fois les aspects économiques, techniques, architecturaux et urbanistiques.</p>",
+  "audit_technique": "Audit technique et rapport d'inspection d'état d'immeuble.",
+  "assistance_maitre": "Assistance au Maître de l’Ouvrage, architectes et entrepreneurs à la recherche d’un arbitrage objectif.",
+  "assistance_gestion": "Assistance à la gestion locative et à l’optimalisation d’un portefeuille immobilier.",
+  "service_etat": "Inspection d'état locatif.",
+  "regularisation_conformite": "Régularisation et conformité urbanistique.",
+  "etablissement_valeur": "Etablissement de la valeur d’immeuble (valeur de construction, dépréciation par vétusté, valeur de marché ou vénale, valeur locative, valeur de rendement)",
+  "etude_renovation": "Etude pour rénovation, construction, reconversion ou réaffectation d’immeuble.",
+  "etude_faisabilite": "Etude de faisabilité économique.",
+  "conception_architecturale": "Conception architecturale et étude d'aménagement.",
+  "maitrise_deleguee": "Maîtrise d’ouvrage déléguée et suivi d’exécution de travaux.",
+  "partenaires_clients": "Partenaires et clients",
+  "contact": "Contact",
+  "expert_architecte": "Expert immobilier et architecte",
+  "ingenieur_architecte": "ingénieur et architecte",
+  "architecte": "architecte",
+  "rue_monastere": "Rue du Monastère",
+  "bruxelles": "Bruxelles",
+  "belgique": "Belgique",
+  "email_envoye": "Un email nous a été envoyé.",
+  "nous_vous_recontacterons": "Nous vous recontacterons dans les plus brefs délais.",
+  "submit": "Envoyer",
+  "dossiers_courants": "Dossiers en cours"
+
+
+
+
+}

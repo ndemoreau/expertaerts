@@ -1,12 +1,20 @@
 template(name="projectSubmit")
-    #newProject
-        +autoForm(collection="Projects" id="insertProjectForm" type="method" meteormethod="createProject" class="form-style")
-            fieldset
-                +afQuickField name="name" class="text-field form-control"
-                +afQuickField name="description" class="text-field form-control" rows=3
+    .row
+        .col-md-12
+            #newProject
+                +autoForm(collection="Projects" id="insertProjectForm" type="method" meteormethod="createProject" class="form-style")
+                    fieldset
+                        +afQuickField name="name_fr" class="text-field form-control"
+                        +afQuickField name="name_en" class="text-field form-control"
+                        +afQuickField name="name_nl" class="text-field form-control"
+                        +afQuickField name="name_it" class="text-field form-control"
+                        +afQuickField name="description_fr" class="text-field form-control" rows=3
+                        +afQuickField name="description_en" class="text-field form-control" rows=3
+                        +afQuickField name="description_nl" class="text-field form-control" rows=3
+                        +afQuickField name="description_it" class="text-field form-control" rows=3
             button(type="submit" class="btn btn-sm btn-outline-inverse") Submit
 
-        button(id="cancelNewProject" class="btn btn-sm btn-outline-inverse") Cancel
+                button(id="cancelNewProject" class="btn btn-sm btn-outline-inverse") Cancel
 
 
 

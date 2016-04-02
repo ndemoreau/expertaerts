@@ -11,11 +11,9 @@ template(name="homeDiv")
 template(name="bureau")
     #bureau.page
         .col-sm-10.col-md-9
-            h2.section-title Bureau
+            h2.section-title {{_ "bureau"}}
             .clearfix
-            p Bureau d’études basé à Bruxelles et organisé sous la forme d’une petite structure flexible, polyvalente et efficiente.
-            p A l’écoute de divers type d’acteurs immobiliers, le bureau offre ses services avec une volonté de « sur-mesure client ».
-            p Chaque problématique est étudiée de façon indépendante et s’intègre dans un processus global synthétisant à la fois les aspects économiques, techniques, architecturaux et urbanistiques.
+            |{{{_ "bureau_text"}}}
 
 template(name="services")
     #services.page.clearfix
@@ -26,22 +24,22 @@ template(name="services")
                 .grid-item.col-md-6
                     .item-content.clearfix
                         ul.services
-                            li Audit technique et rapport d'inspection d'état d'immeuble.
-                            li Assistance au Maître de l’Ouvrage, architectes et entrepreneurs à la recherche d’un arbitrage objectif.
-                            li Assistance à la gestion locative et à l’optimalisation d’un portefeuille immobilier.
-                            li Inspection d'état locatif.
-                            li Régularisation et conformité urbanistique.
+                            li {{_ "audit_technique"}}
+                            li {{_ "assistance_maitre"}}
+                            li {{_ "assistance_gestion"}}
+                            li {{_ "service_etat"}}
+                            li {{_ "regularisation_conformite"}}
                 .grid-item.col-md-6
                     .item-content.clearfix
                         ul.services
-                            li Etablissement de la valeur d’immeuble (valeur de construction, dépréciation par vétusté, valeur de marché ou vénale, valeur locative, valeur de rendement)
-                            li Etude pour rénovation, construction, reconversion ou réaffectation d’immeuble.
-                            li Etude de faisabilité économique.
-                            li Conception architecturale et étude d'aménagement.
-                            li Maîtrise d’ouvrage déléguée et suivi d’exécution de travaux.
+                            li {{_ "etablissement_valeur"}}
+                            li {{_ "etude_renovation"}}
+                            li {{_ "etude_faisabilite"}}
+                            li {{_ "conception_architecturale"}}
+                            li {{_ "maitrise_deleguee"}}
 template(name="partners")
     #partners.page
-        h2.section-title  Partenaires et clients
+        h2.section-title  {{_ "partenaires_clients"}}
         .clearfix
         section.grid.row.clearfix.clearfix-for-2cols
             .grid-item.col-md-6
@@ -81,24 +79,24 @@ template(name="partners")
 
 template(name="contact")
     #contact.page
-        h2.text-right Contact
+        h2.text-right {{_ "contact"}}
         .contact-details.col-sm-5.col-md-5.text-right
             p
                 |Bob Aerts <br>
-                |Expert immobilier et architecte
+                |{{_ "expert_architecte"}}
             p
                 | Giulia Doretti <br>
-                | ingénieur et architecte
+                | {{_ "ingenieur_architecte"}}
             p
                 | Eleonora Maggiore <br>
-                | architecte
+                | {{_ "architecte"}}
             p
-                | Rue du Monastère, 12 <br>
-                | 1000 Bruxelles - Belgique
+                | {{_ "rue_monastere"}}, 12 <br>
+                | 1000 {{_ "bruxelles"}} - {{_ "belgique"}}
         .col-sm-7.col-md-7
             if emailSent
-                p Un email nous a été envoyé.
-                p Nous vous recontacterons dans les plus brefs délais.
+                p {{_ "email_envoye"}}
+                p {{_ "nous_vous_recontacterons"}}
             else
                 form.form-style.clearfix#newRequest
                     .form-group
@@ -110,4 +108,4 @@ template(name="contact")
                     .form-group
                         textarea(type="text" class="form-control required" placeholder="Message..." name="message")
                     .form-group
-                        button(type="submit" class="btn btn-sm btn-outline-inverse") Submit
+                        button(type="submit" class="btn btn-sm btn-outline-inverse") {{_ "submit"}}

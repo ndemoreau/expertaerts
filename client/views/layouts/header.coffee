@@ -15,6 +15,10 @@ Template.header.events
       target = e.target.href.split("#")[1]
       goToPage target
       toggle_main_menu()
+  "click .language": (e, instance) ->
+    debugger
+    TAPi18n.setLanguage(e.target.id)
+
 
 @goToPage = (target, speed) ->
   unless $("#" + target).position() == undefined

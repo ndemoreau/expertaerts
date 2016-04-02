@@ -7,6 +7,9 @@ s3Store = new FS.Store.S3 "s3Images",
 @Images = new FS.Collection "images",
   stores: [imageStore]
 
+@Images.allow download: (userId, fileObj) ->
+  true
+
 Meteor.methods
   removeImage: (id) ->
     Images.remove id

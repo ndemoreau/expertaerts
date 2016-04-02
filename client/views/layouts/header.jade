@@ -1,19 +1,24 @@
 template(name="header")
+    //p.text-center
+    //    span.language#fr FR -
+    //    span.language#nl NL -
+    //    span.language#en EN -
+    //    span.language#it IT
     #mobile-menu-icon.visible-xs(onclick="toggle_main_menu();")
         span(class="glyphicon glyphicon-th")
     ul#main-menu
         li#menu-item-home.menu-item.scroll(class="{{isActive 'home'}}")
-            a(href="/#home") Home
+            a(href="/#home") {{_ "accueil"}}
         li#menu-item-bureau.menu-item.scroll(class="{{isActive 'bureau'}}")
-            a(href="/#bureau") Bureau
+            a(href="/#bureau") {{_ "bureau"}}
         li#menu-item-services.menu-item.scroll(class="{{isActive 'services'}}")
-            a(href="/#services") Services
+            a(href="/#services") {{_ "services"}}
         li#menu-item-partners.menu-item.scroll(class="{{isActive 'partners'}}")
-            a(href="/#partners") Partenaires
+            a(href="/#partners") {{_ "partenaires"}}
         li#menu-item-contact.menu-item.scroll(class="{{isActive 'contact'}}")
-            a(href="/#contact") Contact
+            a(href="/#contact") {{_ "contact"}}
         li#menu-item-projects.menu-item.scroll(class="{{isActive 'projects'}}")
-            a(href="projects") Dossiers
+            a(href="projects") {{_ "dossiers"}}
         li#menu-item-clients.menu-item(class="{{isActive 'clients'}}")
-            a(href="clients") Espace clients
+            a(href="clients") {{_ "espace_clients"}}
             //a(href="https://web131.bh-a.eu/fmi/webd#aertsexpert.fmp12" target="_blank") Login clients

@@ -17,6 +17,7 @@ AutoForm.hooks
 Meteor.startup ->
   _.extend Notifications.defaultOptions,
     timeout: 10000
+  TAPi18n.setLanguage "fr"
 
 
   return

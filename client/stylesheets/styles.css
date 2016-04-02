@@ -426,7 +426,7 @@ table {
             min-height: 100%
         }
         .page {
-            margin-top: 40px;
+            margin-top: 100px;
             padding: 15px;
         }
     }
@@ -1912,4 +1912,8 @@ img.full-width {
 
 #newSharedocButton {
     margin-top: 30px;
+}
+
+.language {
+    cursor: pointer ;
 }
