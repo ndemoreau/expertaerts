@@ -52,3 +52,5 @@ Template.openProjects.events
     Session.set "meteorMethod", "createProject"
     Router.go "adminProject", {_id: @projects.fetch()[0]._id}
   'click #files_menu': -> Router.go "sharedocs"
+  "click #cleanImages": ->
+    Meteor.call "cleanImages"

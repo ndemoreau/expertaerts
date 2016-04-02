@@ -4,6 +4,8 @@ Router.map ->
     path: "/admin/"
     waitOn: ->
       subs.subscribe "allProjects"
+      subs.subscribe "allProjectImages"
+      subs.subscribe "allImages"
     data: ->
       projects: Projects.find()
   @route "adminProject",

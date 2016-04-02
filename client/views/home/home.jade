@@ -6,21 +6,21 @@ template(name="home")
     +contact
 template(name="homeDiv")
     #home.page
-        .mainlogo
-            img(src="images/logo_transp.png" width="438px" id="logo")
+        h1.mainlogo
+            img(src="images/logo_transp.png" width="438px" id="logo" alt="Bob Aerts, Expert Immobilier et architecte")
 template(name="bureau")
     #bureau.page
         .col-sm-10.col-md-9
-            h1.section-title Bureau
+            h2.section-title Bureau
             .clearfix
-            p Bureau d’étude basé à Bruxelles et organisé sous la forme d’une petite structure flexible, polyvalente et efficiente.
+            p Bureau d’études basé à Bruxelles et organisé sous la forme d’une petite structure flexible, polyvalente et efficiente.
             p A l’écoute de divers type d’acteurs immobiliers, le bureau offre ses services avec une volonté de « sur-mesure client ».
-            p Chaque problématique est étudiée de façon indépendante et s’intègre dans un processus global synthétisant à la fois les aspects économiques, techniques, architecturales et urbanistiques.
+            p Chaque problématique est étudiée de façon indépendante et s’intègre dans un processus global synthétisant à la fois les aspects économiques, techniques, architecturaux et urbanistiques.
 
 template(name="services")
     #services.page.clearfix
         .col-sm-12.col-md-12.pull-right.clearfix
-            h1.section-title.bullets Services
+            h2.section-title.bullets Services
             .clearfix
             section.grid.row.clearfix.clearfix-for-2cols
                 .grid-item.col-md-6
@@ -41,7 +41,7 @@ template(name="services")
                             li Maîtrise d’ouvrage déléguée et suivi d’exécution de travaux.
 template(name="partners")
     #partners.page
-        h1.section-title  Partenaires et clients
+        h2.section-title  Partenaires et clients
         .clearfix
         section.grid.row.clearfix.clearfix-for-2cols
             .grid-item.col-md-6
@@ -81,7 +81,7 @@ template(name="partners")
 
 template(name="contact")
     #contact.page
-        h1.text-right Contact
+        h2.text-right Contact
         .contact-details.col-sm-5.col-md-5.text-right
             p
                 |Bob Aerts <br>
@@ -89,6 +89,9 @@ template(name="contact")
             p
                 | Giulia Doretti <br>
                 | ingénieur et architecte
+            p
+                | Eleonora Maggiore <br>
+                | architecte
             p
                 | Rue du Monastère, 12 <br>
                 | 1000 Bruxelles - Belgique

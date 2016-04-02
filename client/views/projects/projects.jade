@@ -42,5 +42,7 @@ template(name="openProjects")
                 each projects
                     p
                         a(href="{{pathFor 'adminProject'}}") #{name}
-                button.btn.btn-sm.btn-outline-inverse#newProject New
+                .btn-group
+                    button.btn.btn-sm.btn-outline-inverse#newProject New
+                    button.btn.btn-sm.btn-outline-inverse#cleanImages Clean Images
                 h1#files_menu.link Espace Client
