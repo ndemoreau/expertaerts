@@ -1,11 +1,11 @@
 {
-  "anglais": "Anglais",
+  "anglais": "français",
   "accueil": "Accueil",
   "services": "services",
   "partenaires": "partenaires",
   "dossiers": "dossiers",
   "espace_clients": "Espace clients",
-  "bureau": "Office",
+  "bureau": "Bureau",
   "bureau_text": "<p>Bureau d’études basé à Bruxelles et organisé sous la forme d’une petite structure flexible, polyvalente et efficiente.</p><p> A l’écoute de divers type d’acteurs immobiliers, le bureau offre ses services avec une volonté de « sur-mesure client »</p><p> Chaque problématique est étudiée de façon indépendante et s’intègre dans un processus global synthétisant à la fois les aspects économiques, techniques, architecturaux et urbanistiques.</p>",
   "audit_technique": "Audit technique et rapport d'inspection d'état d'immeuble.",
   "assistance_maitre": "Assistance au Maître de l’Ouvrage, architectes et entrepreneurs à la recherche d’un arbitrage objectif.",
@@ -28,7 +28,18 @@
   "email_envoye": "Un email nous a été envoyé.",
   "nous_vous_recontacterons": "Nous vous recontacterons dans les plus brefs délais.",
   "submit": "Envoyer",
-  "dossiers_courants": "Dossiers en cours"
+  "dossiers_courants": "Dossiers en cours",
+  "espace_clients": "L'espace clients",
+  "dossiers_traites": "Cet espace donne accès à vos dossiers traités et clôturés par nous.",
+  "dossiers_heberges": "Ils y seront hébergés et téléchargeables pour une période de 3 années.",
+  "dossiers_rapports": "Tous nos rapports sont munis d'une signature électronique.",
+  "dossiers_besoins": "En cas de besoin, demandez-nous votre exemplaire papier via notre page",
+  "entrer_num_dossier": "Veuillez entrer le numéro de dossier",
+  "num_dossier": "Numéro de dossier",
+  "fichiers_dispo": "Fichiers disponibles",
+  "full_name": "Nom complet",
+  "tel": "Téléphone",
+  "message": "Message"
 
 
 

@@ -100,12 +100,12 @@ template(name="contact")
             else
                 form.form-style.clearfix#newRequest
                     .form-group
-                        input(type="text" class="text-field form-control required" placeholder="Nom complet" name="name")
+                        input(type="text" class="text-field form-control required" placeholder="{{_ 'full_name'}}" name="name")
                     .form-group
-                        input(type="email" class="text-field form-control required" placeholder="email" name="email")
+                        input(type="Email" class="text-field form-control required" placeholder="email" name="email")
                     .form-group
-                        input(type="tel" class="text-field form-control required" placeholder="Téléphone" name="tel")
+                        input(type="tel" class="text-field form-control required" placeholder="{{_ 'tel'}}" name="tel")
                     .form-group
-                        textarea(type="text" class="form-control required" placeholder="Message..." name="message")
+                        textarea(type="text" class="form-control required" placeholder="{{_ 'message'}}..." name="message")
                     .form-group
                         button(type="submit" class="btn btn-sm btn-outline-inverse") {{_ "submit"}}

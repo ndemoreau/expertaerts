@@ -1,23 +1,23 @@
 template(name="clients")
     #client.page.animated.slideInRight
-        h2.text-left L'espace clients
+        h2.text-left {{_ "espace_clients"}}
 
         p
-            |Cet espace donne accès à vos dossiers traités et clôturés par nous. <br/>
-            |Ils y seront hébergés et téléchargeables pour une période de 3 années. <br/>
-            |Tous nos rapports sont munis d'une signature électronique. <br/>
-            |En cas de besoin, demandez-nous votre exemplaire papier via notre page
-            a(href="/#contact") contact
-        p Veuillez entrer le numéro de dossier:
+            |{{_ "dossiers_traites"}} <br/>
+            |{{_ "dossiers_heberges"}} <br/>
+            |{{_ "dossiers_rapports"}} <br/>
+            |{{_ "dossiers_besoins"}}
+            a(href="/#contact") {{_ "contact"}}
+        p {{_ "entrer_num_dossier"}}:
         form(id="file_login" class=" form-style clearfix")
             .form-group
-                input(id="pin" name="pin" type="password" class="text-field form-control required" placeholder="Numéro de dossier")
+                input(id="pin" name="pin" type="password" class="text-field form-control required" placeholder="{{_ 'num_dossier'}}")
             .form-group
-                button#submit_file(type="submit" class="btn btn-sm btn-outline-inverse") Submit
+                button#submit_file(type="submit" class="btn btn-sm btn-outline-inverse") {{_ "submit"}}
         .alert.alert-warning.hidden   #{nothing_found}
 
 template(name="ProjectImageList")
-    h3 Fichiers disponibles
+    h3 {{_ "fichiers_dispo"}}
     div(id="images-{{project._id}}" class="row")
     each project_images
         +ProjectImage

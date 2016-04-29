@@ -6,8 +6,7 @@ Handlebars.registerHelper "session",(input) ->
   Session.get(input)
 Handlebars.registerHelper "__",(input, value) ->
   language= TAPi18n.getLanguage()
-#  if language then input[value + '_' + language] else input[value + '_fr']
-# Remove the comment when traduction are ready!!!
+  if language then input[value + '_' + language] else input[value + '_fr']
   input[value]
 Handlebars.registerHelper "view_boolean",(input) ->
   if input
