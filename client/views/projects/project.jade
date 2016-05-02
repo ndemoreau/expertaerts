@@ -7,8 +7,6 @@ template(name="adminProject")
             +projectSubmit
          else
             with project
-               h2(id="text" class="editable inline" data-type="text" data-pk="#{_id}" data-emptytext="Nom" data-name="name" data-value="#{name}" data-context="Projects") Nom: {{name}}
-               .clearfix
                h2(id="text" class="editable inline" data-type="text" data-pk="#{_id}" data-emptytext="Nom_fr" data-name="name_fr" data-value="#{name_fr}" data-context="Projects") {{name_fr}}
                .clearfix
                h2(id="text" class="editable inline" data-type="text" data-pk="#{_id}" data-emptytext="Nom_en" data-name="name_en" data-value="#{name_en}" data-context="Projects") Nom EN: {{name_en}}
@@ -16,8 +14,6 @@ template(name="adminProject")
                h2(id="text" class="editable inline" data-type="text" data-pk="#{_id}" data-emptytext="Nom_nl" data-name="name_nl" data-value="#{name_nl}" data-context="Projects") Nom NL: {{name_nl}}
                .clearfix
                h2(id="text" class="editable inline" data-type="text" data-pk="#{_id}" data-emptytext="Nom_it" data-name="name_it" data-value="#{name_it}" data-context="Projects") Nom IT: {{name_it}}
-               .clearfix
-               p(id="text" class="editable inline" data-inputclass="x-textarea" data-type="textarea" data-pk="#{_id}" data-emptytext="description" data-name="description" data-value="#{description}" data-context="Projects") {{description}}
                .clearfix
                p(id="text" class="editable inline" data-inputclass="x-textarea" data-type="textarea" data-pk="#{_id}" data-emptytext="description FR" data-name="description_fr" data-value="#{description_fr}" data-context="Projects") {{description_fr}}
                .clearfix
