@@ -51,6 +51,9 @@ ProjectImages.attachSchema(Schemas.ProjectImage)
 #  }
 #});
 
+ProjectImages.allow
+  insert: () -> true
+
 # Methods
 Meteor.methods
   createProjectImage: (projectImage) ->

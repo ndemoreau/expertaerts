@@ -18,22 +18,26 @@ Schemas.Project = new SimpleSchema
   name_fr:
     type: String
     label: "Name FR"
-    max: 50
+    max: 50,
+    optional: true
 
   name_en:
     type: String
     label: "Name EN"
-    max: 50
+    max: 50,
+    optional: true
 
   name_nl:
     type: String
     label: "Name NL"
-    max: 50
+    max: 50,
+    optional: true
 
   name_it:
     type: String
     label: "Name IT"
-    max: 50
+    max: 50,
+    optional: true
 
   description:
     type: String
@@ -43,26 +47,31 @@ Schemas.Project = new SimpleSchema
   description_fr:
     type: String
     label: "Description FR"
-    max: 600
+    max: 600,
+    optional: true
 
   description_en:
     type: String
     label: "Description EN"
-    max: 600
+    max: 600,
+    optional: true
 
   description_nl:
     type: String
     label: "Description NL"
-    max: 600
+    max: 600,
+    optional: true
 
   description_it:
     type: String
     label: "Description IT"
-    max: 600
+    max: 600,
+    optional: true
 
   published:
     type: Boolean
     optional: true
+
   first_image:
     type: String
     optional: true
@@ -92,7 +101,7 @@ Meteor.methods
     console.log "inserting project..."
     p = project
     p["creation_date"] = new Date()
-    p.published = true
+    p.published = false
     id = Projects.insert(p)
     return id
 

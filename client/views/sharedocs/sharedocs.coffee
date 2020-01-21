@@ -29,7 +29,7 @@ Template.sharedoc.events
 Template.newSharedoc.events
   "submit #newSharedoc": (e, t) ->
     e.preventDefault()
-    f = serializeForm($("#newSharedoc"))
+    f = serializeForm(t.$("#newSharedoc"))
     Meteor.call "createSharedoc", f, (err) ->
       if err
         console.error 'newSharedoc', err
