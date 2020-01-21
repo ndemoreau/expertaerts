@@ -27,6 +27,12 @@ Template.sharedoc.events
     Sharedocs.update(this._id, $set: {published: new_val})
 
 Template.newSharedoc.events
-  "submit #newSharedoc": (e, t)->
+  "submit #newSharedoc": (e, t) ->
+    e.preventDefault()
     f = serializeForm($("#newSharedoc"))
-    Meteor.call "createSharedoc", f
+    Meteor.call "createSharedoc", f, (err) ->
+      if err
+        console.error 'newSharedoc', err
+      else
+        Session.set "createSharedoc", false
+        Session.set "meteorMethod", null

@@ -78,7 +78,7 @@ Sharedocs.attachSchema(Schemas.Sharedoc)
 #});
 
 Sharedocs.allow({
-  update: (sharedocId, doc) -> typeof sharedocId == 'string'
+  update: (sharedocId, doc) -> typeof sharedocId == 'string' && Match.test(doc, Object)
 });
 
 # Methods
