@@ -79,13 +79,9 @@ Projects.attachSchema(Schemas.Project)
 
 # Allow/Deny
 @Projects.allow
-  insert: (projectId, doc) ->
-    if Meteor.user() then true else false
-  update: (projectId, doc, fieldNames, modifier) ->
-    if Meteor.user() then true else false
-  remove: (projectId, doc) ->
-    true
-
+  insert: (projectId, doc) -> typeof Meteor.userId() == 'string' && Match.test(doc, Object)
+  update: (projectId, doc) -> typeof Meteor.userId() == 'string' && Match.test(doc, Object)
+  remove: (projectId, doc) -> typeof Meteor.userId() == 'string'
 
 # Methods
 Meteor.methods
