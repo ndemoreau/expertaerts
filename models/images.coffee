@@ -14,9 +14,13 @@ s3Store = new FS.Store.S3 "s3Images",
 
 Meteor.methods
   removeImage: (id) ->
+    check(this.userId, String)
+
     Images.remove id
     ProjectImages.remove image_id: id
   cleanImages: ->
+    check(this.userId, String)
+
     console.log "Cleaning..."
     project_images = ProjectImages.find()
     project_images.forEach (pi) ->

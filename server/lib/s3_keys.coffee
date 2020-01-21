@@ -10,10 +10,10 @@ Meteor.methods
     if S3_keyId
       S3_keyId
     else
-      throw Error()
+      throw Error('Invalid value of S3_KEYID_WEB')
 
   s3_secret: ->
     if S3_secretId
       S3_secretId
     else
-      throw Error()
+      throw Error('Invalid value of S3_ACCESS_KEY_WEB')

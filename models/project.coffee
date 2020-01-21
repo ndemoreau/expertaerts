@@ -90,7 +90,8 @@ Projects.attachSchema(Schemas.Project)
 # Methods
 Meteor.methods
   createProject: (project) ->
-    
+    check(this.userId, String)
+
     #    if(can.createProject(Meteor.project()))
     console.log "inserting project..."
     p = project
@@ -100,6 +101,7 @@ Meteor.methods
     return id
 
   updateProject: (project) ->
+    check(this.userId, String)
 
     #    if(can.createProject(Meteor.project()))
     console.log "updating project..."
@@ -107,7 +109,8 @@ Meteor.methods
     Projects.update(session.Get "currentProject", {$set: project})
 
   removeProject: (project) ->
-    
+    check(this.userId, String)
+
     #    if(can.removeProject(Meteor.project(), project)){
     #      console.log("removing project" + project._id);
     Projects.remove project._id
