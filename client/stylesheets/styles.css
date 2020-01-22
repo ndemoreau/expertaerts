@@ -1804,10 +1804,22 @@ h6 {
     height: auto;
     display: block;
 }
+.img-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+.upload-progressbar {
+  max-width: 220px;
+}
+.img-thumbnail {
+  width: 100px;
+  max-width: 100px;
+}
 .img-thumbnail.inverse {
     background-color: #000029;
     height: 85px;
-    min-width: 145px;
+    /* min-width: 145px; */
     white-space: nowrap;
 }
 .img-vertical-aligner {

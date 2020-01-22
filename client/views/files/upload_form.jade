@@ -7,11 +7,13 @@ template(name="uploadForm")
 template(name="imageList")
     h3 Images list
     div(id="images-{{project._id}}" class="row")
+      div(class="img-list")
         each project_images
             +image
 template(name="image")
         with FS.GetFile "images" image_id
             unless this.isUploaded
+              div(class="upload-progressbar")
                 +FS.UploadProgressBar bootstrap=true
             else
                 .col-md-6.image-sortable
@@ -19,11 +21,11 @@ template(name="image")
                         .col-md-6
                             p
                                 if isImage
-                                    img(src="{{url}}" alt="{{name}}" class="img-thumbnail" width="140px")
+                                    img(src="{{url}}" alt="{{name}}" class="img-thumbnail" width="100px")
                                 else
                                     .img-thumbnail.inverse
                                         span.img-vertical-aligner
-                                        img(src="/images/logo_transp.png" alt="{{name}}" width="140px")
+                                        img(src="/images/logo_transp.png" alt="{{name}}" width="100px")
                             p
                                 div(id="text" class="editable" data-type="text" data-pk="#{../_id}" data-name="name" data-value="#{../name}" data-context="ProjectImages") #{../name}
                                 br
@@ -32,4 +34,3 @@ template(name="image")
                             p Position: {{../rank}}
                             .delete_button.btn.btn-danger.btn-xs
                                                     |Effacer
-

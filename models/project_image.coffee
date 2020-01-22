@@ -53,6 +53,7 @@ ProjectImages.attachSchema(Schemas.ProjectImage)
 
 ProjectImages.allow
   insert: () -> true
+  update: () -> true
 
 # Methods
 Meteor.methods
