@@ -1,1 +1,5 @@
 mongo/*
+node_modules/
+.local
+.idea
+.scannerwork/
