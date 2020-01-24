@@ -36,7 +36,9 @@ module.exports = {
       NEW_RELIC_LOG_LEVEL: 'error',
       NEW_RELIC_NO_CONFIG_FILE: 'true',
       SENDGRID_PASSWORD: 'dxcyxz9a3815',
-      SENDGRID_USERNAME: 'app36811562@heroku.com'
+      SENDGRID_USERNAME: 'app36811562@heroku.com',
+      S3_KEYID_WEB: 'AKIAJBAAMVTKUWB7HVSA',
+      S3_ACCESS_KEY_WEB: 'NYPh7WNeZRkZMcoiO2QOMNtuQI8wrPRY67eViv7K'
     },
 
     docker: {
