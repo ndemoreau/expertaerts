@@ -42,6 +42,13 @@ body {
     width: 6667px;
 }
 
+.contents-container-login {
+    background: transparent url('images/brupan_nbb_low_5.jpg') no-repeat left top;
+    min-height: 100%;
+    width: 600px;
+}
+
+
 @media (max-width: 767px) {
     .contents-container {
         min-width: 3840px;
