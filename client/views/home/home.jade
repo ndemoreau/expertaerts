@@ -107,5 +107,9 @@ template(name="contact")
                         input(type="tel" class="text-field form-control required" placeholder="{{_ 'tel'}}" name="tel")
                     .form-group
                         textarea(type="text" class="form-control required" placeholder="{{_ 'message'}}..." name="message")
+                    #contact-errors
+                      each errors
+                        p.contact-form-error 
+                          {{err}}
                     .form-group
                         button(type="submit" class="btn btn-sm btn-outline-inverse") {{_ "submit"}}

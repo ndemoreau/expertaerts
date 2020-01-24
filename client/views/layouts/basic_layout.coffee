@@ -44,4 +44,3 @@ Template.basicLayout.rendered = ->
     $(".contents-container").css("width",width + "px")
     $(".contents-container").css("height",height + "px")
     $(".page").css("width",pageWidth + "px")
-

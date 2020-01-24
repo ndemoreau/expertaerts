@@ -1420,6 +1420,9 @@ h6 {
   height: 264px;
 }
 
+#main-content .contact-form-error {
+  font-weight: bold;
+}
 
     @media (min-width: 768px) {
         #main-content .form-style input.text-field,

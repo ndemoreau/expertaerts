@@ -2,7 +2,6 @@ Router.map ->
   @route "home",
     path: "/"
 
-
   @route "clients",
     path:"/clients"
     layoutTemplate: "clientLayout"
