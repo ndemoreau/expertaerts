@@ -51,9 +51,14 @@ ProjectImages.attachSchema(Schemas.ProjectImage)
 #  }
 #});
 
+ProjectImages.allow
+  insert: () -> true
+  update: () -> true
+
 # Methods
 Meteor.methods
   createProjectImage: (projectImage) ->
+    check(this.userId, String)
 
     #    if(can.createProjectimage(Meteor.projectimage()))
     console.log "inserting projectimage..."
@@ -64,6 +69,7 @@ Meteor.methods
     return id
 
   removeProjectimage: (projectImage) ->
+    check(this.userId, String)
 
     #    if(can.removeProjectimage(Meteor.projectimage(), projectimage)){
     #      console.log("removing projectimage" + projectimage._id);
@@ -75,5 +81,7 @@ Meteor.methods
 #      throw new Meteor.Error(403, 'You do not have the rights to delete this projectimage.')
 #    }
   UpdateProjectImageByImageId: (image_id, update) ->
+    check(this.userId, String)
+
     console.log "updating: " + image_id + update.rank
     ProjectImages.update({image_id: image_id}, {$set:update})

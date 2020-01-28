@@ -3,7 +3,21 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
+standard-minifier-css
+standard-minifier-js
+
 iron:router
 coffeescript
 mquandalle:jade
@@ -24,10 +38,7 @@ email
 aldeed:console-me
 
 rubaxa:sortable
-meteorhacks:npm
 
-
-npm-container
 percolate:google-api
 momentjs:moment
 natestrauser:animate-css

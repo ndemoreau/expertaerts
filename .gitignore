@@ -1,1 +1,6 @@
 mongo/*
+node_modules/
+.local
+.idea
+.scannerwork/
+npm-debug.log

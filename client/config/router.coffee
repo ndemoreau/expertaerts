@@ -29,23 +29,28 @@ Router.onAfterAction ->
       inputclass: 'input-xxlarge'
       display: ->
       success: (response, newValue) ->
+        data = @dataset
+        oldVal = if typeof data.value == 'string' then data.value.trim() else ''
+        name = if typeof data.name == 'string' then data.name.trim() else ''
+        return if name.length == 0
+
         newVal = {}
-        oldVal = $.trim $(this).data("value")
-        name = $(this).data("name")
         newVal[name] = newValue
-        eval($(this).data("context")).update $(this).data("pk"), $set: newVal
-        , (error) ->
+
+        collectionName = data.context
+        pk = data.pk
+
+        window[collectionName].update pk, $set: newVal, (error) ->
           if error
             Notifications.error error.message
-          Meteor.defer -> $(".editable[data-name=" + name + "]").data('editableContainer').formOptions.value = oldVal
+
     url = Router.current().url
     if  url.indexOf("#") > -1
       this_url = url.split("#")[1]
-      console.log this_url
       goToPage this_url, 1000
     else
       $("html, body").stop().animate
         scrollLeft: 0
         scrollTop: 0
       ,1
-  ,0)
+  , 100)

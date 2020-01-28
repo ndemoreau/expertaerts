@@ -19,8 +19,5 @@ Meteor.startup ->
     timeout: 10000
   TAPi18n.setLanguage "fr"
 
-
-  return
-  AutoForm.debug()
-
-
+  if Meteor.isDevelopment
+    AutoForm.debug()

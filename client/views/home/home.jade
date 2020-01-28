@@ -45,20 +45,24 @@ template(name="partners")
                 .item-content.clearfix
                     ul.services
                         li CPH Banque
-                        li Fonds du Logement - Woningfonds
-                        li Belsquare
+                        //- li Fonds du Logement - Woningfonds
+                        li citydev.brussels
+                        //- li Belsquare
                         li Triodos Bank
                         li One To Be
                         li C.S.T.C.
+                        li Espace Kegeljan
             .grid-item.col-md-6
                 .item-content.clearfix
                     ul.services
-                        li Easylife in Brussels
-                        li Gotham City
-                        li RB Construction
-                        li Espace Kegeljan
+                        //- li Easylife in Brussels
+                        //- li Gotham City
+                        //- li RB Construction
                         li SECO
                         li InSpace
+                        li Fintro
+                        li La Gestion d'Immeuble
+                        li Jicéco
 
         //section.grid.row.customer-logos.clearfix.clearfix-for-2cols
         //    .grid-item.col-xs-6
@@ -86,6 +90,9 @@ template(name="contact")
             p
                 | {{_ "rue_monastere"}}, 12 <br>
                 | 1000 {{_ "bruxelles"}} - {{_ "belgique"}}
+                
+            img.img-fluid.contact-photo#contact_photo(src="/images/DSC04840_resize3.jpeg" alt="Bob Aerts photo")
+                
         .col-sm-7.col-md-7
             if emailSent
                 p {{_ "email_envoye"}}
@@ -100,5 +107,9 @@ template(name="contact")
                         input(type="tel" class="text-field form-control required" placeholder="{{_ 'tel'}}" name="tel")
                     .form-group
                         textarea(type="text" class="form-control required" placeholder="{{_ 'message'}}..." name="message")
+                    #contact-errors
+                      each errors
+                        p.contact-form-error 
+                          | {{err}}
                     .form-group
                         button(type="submit" class="btn btn-sm btn-outline-inverse") {{_ "submit"}}
