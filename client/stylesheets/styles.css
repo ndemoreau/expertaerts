@@ -1414,10 +1414,16 @@ h6 {
     font-family: 'open_sansregular', sans-serif;
 }
 
+@media screen and (max-width: 768px) {
+  #main-content .contact-details {
+      font-size: 0.75em;
+  }
+}
 
-#main-content .contact-details .contact_photo {
+#main-content .contact-details .contact-photo {
   margin-top: 15px;
-  height: 264px;
+  max-width: 100%;
+  height: auto;
 }
 
 #main-content .contact-form-error {
