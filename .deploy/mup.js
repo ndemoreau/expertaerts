@@ -26,7 +26,7 @@ module.exports = {
     env: {
       // TODO: Change to your app's url
       // If you are using ssl, it needs to start with https://
-      ROOT_URL: 'http://46.101.140.46',
+      ROOT_URL: 'https://expertaerts.be',
       MONGO_URL: 'mongodb://heroku_app36811562:11tbj0pblc9f4v2i55ce1ihsb5@ds037632-a0.mongolab.com:37632/heroku_app36811562?replicaSet=rs-ds037632',
       // MONGO_URL: 'mongodb://heroku_app36811562:11tbj0pblc9f4v2i55ce1ihsb5@ds221339.mlab.com:21339/heroku_app36811562?connectTimeoutMS=10000&authSource=heroku_app36811562&authMechanism=SCRAM-SHA-1',
       // MONGO_OPLOG_URL: 'mongodb://mongodb/local',
@@ -63,12 +63,12 @@ module.exports = {
   // Use the proxy to setup ssl or to route requests to the correct
   // app when there are several apps
 
-  // proxy: {
-  //   domains: 'mywebsite.com,www.mywebsite.com',
+  proxy: {
+    domains: 'expertaerts.be,www.expertaerts.be',
 
-  //   ssl: {
-  //     // Enable Let's Encrypt
-  //     letsEncryptEmail: 'email@domain.com'
-  //   }
-  // }
+    ssl: {
+      // Enable Let's Encrypt
+      letsEncryptEmail: 'nicolas@netskill.be'
+    }
+  }
 };
