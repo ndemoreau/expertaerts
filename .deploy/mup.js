@@ -68,7 +68,8 @@ module.exports = {
 
     ssl: {
       // Enable Let's Encrypt
-      letsEncryptEmail: 'nicolas@netskill.be'
+      letsEncryptEmail: 'nicolas@netskill.be',
+      forceSSL: true
     }
   }
 };
