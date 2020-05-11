@@ -27,8 +27,9 @@ module.exports = {
       // TODO: Change to your app's url
       // If you are using ssl, it needs to start with https://
       ROOT_URL: 'https://expertaerts.be',
-      MONGO_URL: 'mongodb://heroku_app36811562:11tbj0pblc9f4v2i55ce1ihsb5@ds037632-a0.mongolab.com:37632/heroku_app36811562?replicaSet=rs-ds037632',
-      // MONGO_URL: 'mongodb://heroku_app36811562:11tbj0pblc9f4v2i55ce1ihsb5@ds221339.mlab.com:21339/heroku_app36811562?connectTimeoutMS=10000&authSource=heroku_app36811562&authMechanism=SCRAM-SHA-1',
+      MONGO_URL: 'mongodb://expertaerts:11tbj0pblc9f4v2i55ce1ihsb5@134.122.93.205:27017/expertaerts?serverSelectionTimeoutMS=5000&connectTimeoutMS=10000&authSource=expertaerts&authMechanism=SCRAM-SHA-1&replicaSet=rs0',
+      // MONGO_URL: 'mongodb://heroku_app36811562:11tbj0pblc9f4v2i55ce1ihsb5@ds037632-a0.mongolab.com:37632/heroku_app36811562?replicaSet=rs-ds037632',
+      MONGO_OPLOG_URL: 'mongodb://oplogreader:4RPc2UtraKJhLxYa7gxHDFch@134.122.93.205:27017/local?serverSelectionTimeoutMS=5000&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-1&replicaSet=rs0',
       // MONGO_OPLOG_URL: 'mongodb://mongodb/local',
       NEW_RELIC_APP_NAME: 'expertaerts',
       NEW_RELIC_LICENSE_KEY: '0a88d0aa472f4af4b0669a2945c5f45474142d55',
