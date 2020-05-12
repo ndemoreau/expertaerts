@@ -92,9 +92,9 @@ template(name="contact")
             p
                 | {{_ "rue_monastere"}}, 12 <br>
                 | 1000 {{_ "bruxelles"}} - {{_ "belgique"}}
-                
-            img.img-fluid.contact-photo#contact_photo(src="/images/DSC04840_resize3.jpeg" alt="Bob Aerts photo")
-                
+
+            img.img-fluid.contact-photo#contact_photo(src="/images/contact.jpg" alt="Bob Aerts photo")
+
         .col-sm-7.col-md-7
             if emailSent
                 p {{_ "email_envoye"}}
@@ -111,7 +111,7 @@ template(name="contact")
                         textarea(type="text" class="form-control required" placeholder="{{_ 'message'}}..." name="message")
                     #contact-errors
                       each errors
-                        p.contact-form-error 
+                        p.contact-form-error
                           | {{err}}
                     .form-group
                         button(type="submit" class="btn btn-sm btn-outline-inverse") {{_ "submit"}}
